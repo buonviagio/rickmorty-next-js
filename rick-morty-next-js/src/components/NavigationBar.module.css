@@ -1,0 +1,40 @@
+.navigationBarContainer {
+  padding: 1em;
+  background-color: #0c0431;
+}
+
+.navbar {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+.navbar li a {
+  text-decoration: none;
+  color: #f0f8ff;
+}
+
+.navbar li a:hover {
+  color: #ffcc00;
+}
+
+.gradientContainer {
+  height: 2em;
+  background: linear-gradient(
+    #0c0431,
+    rgba(12, 4, 49, 0.738) 19%,
+    rgba(12, 4, 49, 0.541) 34%,
+    rgba(12, 4, 49, 0.382) 47%,
+    rgba(12, 4, 49, 0.278) 56.5%,
+    rgba(12, 4, 49, 0.194) 65%,
+    rgba(12, 4, 49, 0.126) 73%,
+    rgba(12, 4, 49, 0.075) 80.2%,
+    rgba(12, 4, 49, 0.042) 86.1%,
+    rgba(12, 4, 49, 0.021) 91%,
+    rgba(12, 4, 49, 0.008) 95.2%,
+    rgba(12, 4, 49, 0.002) 98.2%,
+    rgba(12, 4, 49, 0)
+  );
+}

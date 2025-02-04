@@ -1,0 +1,38 @@
+.mainContainerForCharacterPage {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backListButtonContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 1em;
+}
+
+.characterInfoContainer {
+  border: 1px solid #000;
+  display: flex;
+
+  align-items: center;
+  padding: 1em;
+  margin: 1em;
+}
+
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1em;
+  padding-left: 1em;
+  border-left: 1px solid #000;
+}
+
+.paginationButtons {
+  width: 400;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 1em;
+}
