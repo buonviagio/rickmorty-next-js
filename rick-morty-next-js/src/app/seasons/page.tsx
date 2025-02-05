@@ -1,6 +1,6 @@
 "use client";
 import { GET_SEASON } from "@/GQL-queries/firstquery";
-import { Character } from "@/models/customType";
+import { Character, Episode } from "@/models/customType";
 import { useQuery, useSuspenseQuery } from "@apollo/client";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -45,9 +45,9 @@ export default function RickMortySeasons() {
         </thead>
         <tbody>
           {data &&
-            data.episodes.results.map((episode, index) => (
+            data.episodes.results.map((episode: Episode) => (
               <tr key={episode.id}>
-                <td>{String(index + 1).padStart(2, "0")}</td>
+                <td>{String(episode.id).padStart(2, "0")}</td>
                 <td>{episode.name}</td>
                 <td>
                   <div className="d-flex flex-wrap">

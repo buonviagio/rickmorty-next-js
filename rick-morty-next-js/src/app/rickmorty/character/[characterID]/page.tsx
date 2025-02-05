@@ -1,12 +1,3 @@
-// "use client";
-// import { useParams } from "next/navigation";
-// import React from "react";
-
-// export default function CharacterDetail() {
-//   const parameter = useParams<{ characterName: string }>();
-//   return <div> CharacterDetail Page {parameter.characterName}</div>;
-// }
-
 import { Character } from "@/models/customType";
 import Image from "next/image";
 import React from "react";
@@ -20,17 +11,22 @@ const API_URL = "https://rickandmortyapi.com/api/character";
 type CharacterDetailProps = {
   params: Promise<{ characterID: string }>;
 };
+
+export async function generateStaticParams() {
+  const characterId = await fetch("https://rickandmortyapi.com/api/character")
+    .then((res) => res.json())
+    .catch((error) => console.log(error));
+
+  return characterId.map((character: Character) => ({
+    slug: character.id,
+  }));
+}
+
 export default async function CharacterDetail({
   params,
 }: CharacterDetailProps) {
-  //const parameter = useParams<{ characterName: string }>();
-
   const { characterID } = await params;
 
-  // const responce = await fetch(
-  //   `https://rickandmortyapi.com/api/character/${characterID}`
-  // );
-  // const character = (await responce.json()) as Character;
   console.log("characterID :>> ", characterID);
   const character = await fetchCharacter(Number(characterID), API_URL);
   console.log("character :>> ", character);

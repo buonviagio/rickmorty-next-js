@@ -34,3 +34,9 @@ export interface Location {
   name: string
   url: string
 }
+
+export interface Episode {
+  name: string
+  id: string
+  characters: Character[]
+}

@@ -6,11 +6,11 @@
   align-items: center;
 }
 
-.table td img {
+/* .table td img {
   transition: transform 0.2s ease-in-out;
 }
 
 .table td img:hover {
   transform: scale(1.2);
   cursor: pointer;
-}
+} */
