@@ -7,7 +7,7 @@ export interface Info {
   count: number
   pages: number
   next: string
-  prev: any
+  prev: string
 }
 
 export interface Character {
@@ -36,6 +36,27 @@ export interface Location {
 }
 
 export interface Episode {
+  name: string
+  id: string
+  characters: Character[]
+}
+
+
+
+//-----
+export interface Root {
+  data: Data
+}
+
+export interface Data {
+  episodes: Episodes
+}
+
+export interface Episodes {
+  results: Result[]
+}
+
+export interface Result {
   name: string
   id: string
   characters: Character[]

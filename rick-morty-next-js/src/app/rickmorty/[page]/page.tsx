@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { ApiResponse } from "../../../models/customType";
 import { fetchCharacters } from "../../actions/charactersActions";
 import styles from "./page.module.css";
 import Link from "next/link";

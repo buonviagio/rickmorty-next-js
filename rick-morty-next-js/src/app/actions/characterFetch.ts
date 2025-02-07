@@ -1,4 +1,4 @@
-import { ApiResponse, Character } from "@/models/customType";
+import { Character } from "@/models/customType";
 
 async function fetchCharacter(page: number, API_URL:string) {
   const response = await fetch(`${API_URL}/${page}`);

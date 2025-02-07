@@ -13,11 +13,11 @@ type CharacterDetailProps = {
 };
 
 export async function generateStaticParams() {
-  const characterId = await fetch("https://rickandmortyapi.com/api/character")
+  const response = await fetch("https://rickandmortyapi.com/api/character")
     .then((res) => res.json())
     .catch((error) => console.log(error));
 
-  return characterId.map((character: Character) => ({
+  return response.results.map((character: Character) => ({
     slug: character.id,
   }));
 }
