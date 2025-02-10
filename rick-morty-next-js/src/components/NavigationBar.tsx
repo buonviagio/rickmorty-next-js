@@ -8,7 +8,7 @@ export default function NavigationBar() {
       <div className={styles.navigationBarContainer}>
         <ul className={styles.navbar}>
           <li>
-            <Link href="#">Homepage</Link>
+            <Link href="/homepage">Homepage</Link>
           </li>
           <li>
             <Link href="/rickmorty/1">Characters</Link>
